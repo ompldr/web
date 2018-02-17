@@ -15,15 +15,5 @@ steps:
   - web
   - web=us.gcr.io/ompldr/web:$REVISION_ID
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-east4-a'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=ompldr-us-east4'
-- name: 'gcr.io/cloud-builders/kubectl'
-  args:
-  - set
-  - image
-  - deployment
-  - web
-  - web=us.gcr.io/ompldr/web:$REVISION_ID
-  env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-west1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=ompldr-us-west1'

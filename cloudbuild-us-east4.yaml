@@ -1,6 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["build", "-t", "us.gcr.io/ompldr/web:$REVISION_ID", "."]
+  args: ['pull', 'us.gcr.io/ompldr/web:latest']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["build",
+    "-t", "us.gcr.io/ompldr/web:$REVISION_ID",
+    "-t", "us.gcr.io/ompldr/web:latest",
+    "--cache-from", "us.gcr.io/ompldr/web:latest",
+     "."
+  ]
 - name: 'gcr.io/cloud-builders/docker'
   args: ["tag", "us.gcr.io/ompldr/web:$REVISION_ID", "us.gcr.io/ompldr/web:latest"]
 - name: 'gcr.io/cloud-builders/docker'

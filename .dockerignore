@@ -1,8 +1,6 @@
-.DS_Store
-.idea
-*.iml
 node_modules
 build
+dist
 *.log*
 npm-debug.log
 .module-cache

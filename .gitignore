@@ -6,3 +6,5 @@ build
 *.log*
 npm-debug.log
 .module-cache
+dist
+package-lock.json

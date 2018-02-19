@@ -50,4 +50,3 @@ steps:
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-west1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=ompldr-us-west1'
-- name: 'gcr.io/cloud-builders/kubectl'

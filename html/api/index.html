@@ -103,7 +103,8 @@
                   <strong>security, privacy, or speed</strong>. With Omploader, you pay upfront using Bitcoin, and your file is automatically distributed across a global CDN. You decide how much you want to pay based on usage, and you can refresh at any time.</p>
                 <p>Data is stored using super secure encryption methods (AES-128 on the server, Salsa20 on the client). Furthermore, Omploader does not retain any logs, identifying information, or private keys for file data to respect your privacy.</p>
                 <h3 id="about-the-api">About the API</h3>
-                <p>The Omploader API is available for public use, and operates under an upfront payment model. Generally speaking, there are no limitations on use, however we retain the right to remove content which may be in violation of the underlying host policies. All API endpoints are rate limited to 1 request per second per IP address.</p>
+                <p>The Omploader API is available for public use, and operates under an upfront payment model. Generally speaking, there are no limitations on use, however we retain the right to remove content which may be in violation of the underlying host policies.</p>
+                <p>All API endpoints are rate limited and clients may be throttled as needed. The API returns status code 429 in the event of too many requests.</p>
               </div>
               <div class="doc-examples">
                 <section>

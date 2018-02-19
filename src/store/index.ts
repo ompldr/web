@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, Store } from 'redux';
 import { composeWithDevTools } from "redux-devtools-extension";
 import { logger } from '../middleware';
-import { persistState } from 'redux-localstorage';
+const persistState = require('redux-localstorage');
 import rootReducer, { RootState } from '../reducers';
 import * as Raven from "raven-js";
 import * as createRavenMiddleware from "raven-for-redux"  ;

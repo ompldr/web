@@ -21,7 +21,7 @@ module.exports = {
   },
   output: {
     path: outPath,
-    publicPath: '',
+    publicPath: isProduction ? '' : '/',
     filename: '[name].bundle-[hash:6].js',
     chunkFilename: '[name].bundle-[hash:6].js',
   },
@@ -107,6 +107,9 @@ module.exports = {
     stats: {
       warnings: false
     },
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
   },
   node: {
     // workaround for webpack-dev-server issue

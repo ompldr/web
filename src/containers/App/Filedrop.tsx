@@ -33,17 +33,17 @@ export class Filedrop extends React.Component<File.Props, File.State> {
     return (
       <section>
       <div>
-        <Dropzone onDrop={this.onDrop.bind(this)} >
-        <p>Drop yo files here!</p>
-        </Dropzone>
-        </div>
+      <Dropzone onDrop={this.onDrop.bind(this)} >
+      <p>Drop yo files here!</p>
+      </Dropzone>
+      </div>
       <aside>
       <h2>Dropped files</h2>
       <ul>
-       { files.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>) }
+      { files.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>) }
       </ul>
       </aside>
       </section>
     );
-}
+  }
 }

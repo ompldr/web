@@ -7,5 +7,3 @@ build
 npm-debug.log
 .module-cache
 dist
-package-lock.json
-yarn.lock

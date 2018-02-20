@@ -54,8 +54,8 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY html /usr/share/nginx/html/
 
 RUN cd web \
-  && npm install \
-  && npm run build \
+  && yarn install \
+  && yarn run build \
   && mkdir -p /usr/share/nginx/html/app \
   && cp -r dist/* /usr/share/nginx/html/app \
   && rm -rf /build/web

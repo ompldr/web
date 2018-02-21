@@ -38,9 +38,9 @@ module.exports = {
       // .ts, .tsx
       {
         test: /\.tsx?$/,
-        use: isProduction
-          ? 'awesome-typescript-loader?module=es6'
-          : [
+        use: isProduction ?
+          'awesome-typescript-loader?module=es6' :
+          [
             'react-hot-loader/webpack',
             'awesome-typescript-loader'
           ]
@@ -50,8 +50,7 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            {
+          use: [{
               loader: 'css-loader',
               query: {
                 modules: true,
@@ -65,11 +64,15 @@ module.exports = {
               options: {
                 ident: 'postcss',
                 plugins: [
-                  require('postcss-import')({ addDependencyTo: Webpack }),
+                  require('postcss-import')({
+                    addDependencyTo: Webpack
+                  }),
                   require('postcss-url')(),
                   require('postcss-cssnext')(),
                   require('postcss-reporter')(),
-                  require('postcss-browser-reporter')({ disabled: isProduction }),
+                  require('postcss-browser-reporter')({
+                    disabled: isProduction
+                  }),
                 ]
               }
             }
@@ -77,9 +80,18 @@ module.exports = {
         })
       },
       // static assets
-      { test: /\.html$/, use: 'html-loader' },
-      { test: /\.png$/, use: 'url-loader?limit=10000' },
-      { test: /\.jpg$/, use: 'file-loader' },
+      {
+        test: /\.html$/,
+        use: 'html-loader'
+      },
+      {
+        test: /\.png$/,
+        use: 'url-loader?limit=10000'
+      },
+      {
+        test: /\.jpg$/,
+        use: 'file-loader'
+      },
     ]
   },
   plugins: [
